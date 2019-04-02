@@ -1,4 +1,4 @@
-package de.thro.inf.prg3.a04.collections;
+package ohm.softa.a04;
 
 public interface SimpleList extends Iterable {
 	/**
