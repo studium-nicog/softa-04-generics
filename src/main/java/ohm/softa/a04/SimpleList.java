@@ -70,7 +70,7 @@ public interface SimpleList<T> extends Iterable<T> {
 	default <R> SimpleList<R> map(Function<T, R> transform) {
 		SimpleList<R> result;
 		try {
-			result = (SimpleList<R>) getClass().newInstance();
+			result = (SimpleList<R>) this.getClass().newInstance();
 		} catch (InstantiationException | IllegalAccessException e) {
 			result = new SimpleListImpl<>();
 		}
