@@ -60,15 +60,15 @@ public class SimpleListImpl implements SimpleList {
 	 * @inheritDoc
 	 */
 	@Override
-	public Iterator<Object> iterator() {
+	public Iterator iterator() {
 		return new SimpleIterator();
 	}
 
 	/**
-	 * Helper class which implements the Iterator<T> interface
+	 * Helper class which implements the Iterator interface
 	 * Has to be non static because otherwise it could not access the head of the list
 	 */
-	private class SimpleIterator implements Iterator<Object> {
+	private class SimpleIterator implements Iterator {
 
 		private ListElement current = head;
 
