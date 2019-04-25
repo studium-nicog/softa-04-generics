@@ -11,20 +11,20 @@ package java.lang {
     }
 }
 
-package de.thro.inf.prg3.a04.collections {
+package ohm.softa.a04 {
         interface SimpleFilter<T> {
             +include(item: T): boolean
         }
 
         interface SimpleList<T> extends Iterable {
             +add(item: T)
-            +addDefault()
+            +addDefault(???)
             +size(): int
-            +filter(filter: SimpleFilter<T>): SimpleList
+            +filter(filter: SimpleFilter<T>): SimpleList<T>
         }
 
         class SimpleListImpl<T> implements SimpleList {
-           -head: ListElement
+           -head: ListElement<T>
         }
 
         class SimpleIterator implements Iterator {

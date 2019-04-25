@@ -7,12 +7,12 @@ package java.lang {
     }
 }
 
-package de.thro.inf.prg3.a04.collections {
+package ohm.softa.a04 {
     +interface SimpleList<T> extends Iterable {
         +add(item: T)
-        +addDefault()
+        +addDefault(???)
         +size(): int
-        +default filter(filter: SimpleFilter<T>): SimpleList
+        +default filter(filter: SimpleFilter<T>): SimpleList<T>
         +default <R> map(Function<T, R> transform): SimpleList<R>
     }
     +abstract class CollectionsUtility {
