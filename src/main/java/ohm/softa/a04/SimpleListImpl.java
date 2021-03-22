@@ -58,11 +58,11 @@ public class SimpleListImpl<T> implements SimpleList<T> {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Helper class which implements the Iterator<TE> interface
 	 * Has to be non static because otherwise it could not access the head of the list
 	 */
 	private class SimpleIterator implements Iterator<T> {
-
 		private ListElement<T> current = head;
 
 		/**
