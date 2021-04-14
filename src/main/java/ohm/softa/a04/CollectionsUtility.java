@@ -1,5 +1,6 @@
 package ohm.softa.a04;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Comparator;
 import java.util.Iterator;
 
@@ -155,8 +156,8 @@ public abstract class CollectionsUtility {
 	@SuppressWarnings("unchecked")
 	private static <T> SimpleList<T> createNew(Class<? extends SimpleList> clazz) {
 		try {
-			return clazz.newInstance();
-		} catch (InstantiationException | IllegalAccessException e) {
+			return clazz.getDeclaredConstructor().newInstance();
+		} catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
 			return new SimpleListImpl<>();
 		}
 	}
